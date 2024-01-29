@@ -45,7 +45,14 @@ const clear = () => {
 }
 
 btn_set_value.addEventListener("click", () => {
-	let cuadricula = prompt("Indica el número de cuadrícula (max 100)");
-	createDivs(cuadricula);
-	btn_set_value.setAttribute("disabled", "");
+	let cuadricula = +prompt("Indica el número de cuadrícula (max 100)");
+
+	if(cuadricula > 100 || cuadricula <= 0 || cuadricula !== NaN) {
+		alert("El máximo de la cuadricula es de 100!!!");
+	}
+	else {
+		createDivs(cuadricula);
+		btn_set_value.setAttribute("disabled", "");
+	}
+
 });
