@@ -40,14 +40,11 @@ const createDivs = cuadricula => {
 
 }
 
-const clear = () => {
-
-}
 
 btn_set_value.addEventListener("click", () => {
 	let cuadricula = +prompt("Indica el número de cuadrícula (max 100)");
 
-	if(cuadricula > 100 || cuadricula <= 0 || cuadricula !== NaN) {
+	if(cuadricula > 100 || cuadricula <= 0 || isNaN(cuadricula)) {
 		alert("El máximo de la cuadricula es de 100!!!");
 	}
 	else {
